@@ -24,9 +24,9 @@ public class BankService {
      * @param amount the amount to be deposited.
      */
     public void deposit(double amount){
-        for (amount = 0; amount >= 0; amount++ ){
+        
           balance = balance + amount;
-        }
+        
 
     }
 
@@ -36,10 +36,14 @@ public class BankService {
      * @param amount the amount to be withdrawn.
      */
     public void withdraw(double amount){
-        for(amount =0; amount >= 0; amount--){
-           balance = balance - amount;
-
+            if (balance >= amount){
+                balance = balance - amount;
             }
+           else 
+            System.out.println("Not enough money");
+
+
+            
         }
     
 
